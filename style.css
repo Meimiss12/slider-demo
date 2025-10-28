@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #111;
+  background: #F9F2EA;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,4 +53,5 @@ body {
 
 .nav-button:hover svg {
   transform: scale(1.2);
+
 }
