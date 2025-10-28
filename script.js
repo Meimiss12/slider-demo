@@ -4,7 +4,7 @@ const nextBtn = document.getElementById("next");
 
 let currentIndex = 0;
 const visibleImages = 3;
-const imageWidth = 220; // 200px + 2*10px margin
+const imageWidth = 620; // 200px + 2*10px margin
 const totalImages = track.children.length;
 const maxIndex = Math.ceil(totalImages / visibleImages) - 1;
 
@@ -26,4 +26,5 @@ prevBtn.addEventListener("click", () => {
 setInterval(() => {
   currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
   updateCarousel();
+
 }, 5000);
