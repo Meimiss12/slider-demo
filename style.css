@@ -34,7 +34,7 @@ body {
   object-fit: contain;
   margin: 0 10px;
   border-radius: 6px;
-  background: transparent;
+  background-color: transparent;
 }
 
 .nav-button {
@@ -47,13 +47,10 @@ body {
 }
 
 .nav-button svg {
-  stroke: white;
+  stroke: #333; 
   transition: transform 0.3s ease;
 }
 
 .nav-button:hover svg {
   transform: scale(1.2);
-
 }
-
-
