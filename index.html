@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slider Demo</title>
+  <title>Carrusel de 3 imágenes</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="slider">
-    <button id="prev" aria-label="Anterior">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+  <div class="carousel-wrapper">
+    <button id="prev" class="nav-button" aria-label="Anterior">
+      <svg width="32" height="32" viewBox="0 0 24 24">
         <path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
 
-    <img id="sliderImage" src="oferta1.jpg" alt="Imagen 1" />
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="oferta1.jpg" alt="Oferta 1" />
+        <img src="oferta2.jpg" alt="Oferta 2" />
+        <img src="oferta3.jpg" alt="Oferta 3" />
+        <img src="oferta4.jpg" alt="Oferta 4" />
+        <img src="oferta5.jpg" alt="Oferta 5" />
+        <img src="oferta6.jpg" alt="Oferta 6" />
+      </div>
+    </div>
 
-    <button id="next" aria-label="Siguiente">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+    <button id="next" class="nav-button" aria-label="Siguiente">
+      <svg width="32" height="32" viewBox="0 0 24 24">
         <path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>

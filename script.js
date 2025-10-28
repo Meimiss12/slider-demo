@@ -1,30 +1,29 @@
-const images = ["oferta1.jpg", "oferta2.jpg", "oferta3.jpg", "oferta4.jpg", "oferta5.jpg", "oferta6.jpg"];
-let current = 0;
-
-const sliderImage = document.getElementById("sliderImage");
-const nextBtn = document.getElementById("next");
+const track = document.getElementById("carouselTrack");
 const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
-function showImage(index) {
-    sliderImage.style.opacity = 0;
-    setTimeout(() => {
-        sliderImage.src =images[index];
-        sliderImage.style.opacity = 1;
-    }, 300);
+let currentIndex = 0;
+const visibleImages = 3;
+const imageWidth = 220; // 200px + 2*10px margin
+const totalImages = track.children.length;
+const maxIndex = Math.ceil(totalImages / visibleImages) - 1;
+
+function updateCarousel() {
+  const offset = currentIndex * visibleImages * imageWidth;
+  track.style.transform = `translateX(-${offset}px)`;
 }
 
 nextBtn.addEventListener("click", () => {
-  current = (current + 1) % images.length;
-  showImage(current);
+  currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
+  updateCarousel();
 });
 
 prevBtn.addEventListener("click", () => {
-  current = (current - 1 + images.length) % images.length;
-  showImage(current);
+  currentIndex = (currentIndex - 1) < 0 ? maxIndex : currentIndex - 1;
+  updateCarousel();
 });
 
-// Opcional: autoplay
 setInterval(() => {
-  current = (current + 1) % images.length;
-  showImage(current);
+  currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
+  updateCarousel();
 }, 5000);
