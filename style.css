@@ -34,7 +34,7 @@ body {
   object-fit: contain;
   margin: 0 10px;
   border-radius: 6px;
-  background: #transparent;
+  background: transparent;
 }
 
 .nav-button {
@@ -55,4 +55,5 @@ body {
   transform: scale(1.2);
 
 }
+
 
