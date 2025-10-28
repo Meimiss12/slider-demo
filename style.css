@@ -15,7 +15,7 @@ body {
 }
 
 .carousel-container {
-  width: 660px; /* 3 imágenes de 200px + 3 márgenes de 20px */
+  width: 1860px; /* 3 imágenes de 200px + 3 márgenes de 20px */
   overflow: hidden;
   border-radius: 8px;
   background: transparent;
@@ -28,9 +28,8 @@ body {
 }
 
 .carousel-track img {
-  width: 200px;
-  height: auto;
-  max-height: 300px;
+  width: 600px;
+  height: 800;
   object-fit: contain;
   margin: 0 10px;
   border-radius: 6px;
@@ -54,3 +53,4 @@ body {
 .nav-button:hover svg {
   transform: scale(1.2);
 }
+
